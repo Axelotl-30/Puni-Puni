@@ -8,14 +8,6 @@
     src: url('assets\\fonts\\fot-yuruka-std.ttf');
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 body {
     position: relative;
     background-image: url('assets/background.png');
@@ -24,6 +16,10 @@ body {
     background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-width: 100vw;
 }
 
 body::before {
