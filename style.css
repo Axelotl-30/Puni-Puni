@@ -105,7 +105,7 @@ html {
   justify-content: space-evenly;
 }
 
-.Logo {
+.logo {
     background-image: url('assets\\Logo.png');
     background-repeat: no-repeat;
     background-size: contain;
