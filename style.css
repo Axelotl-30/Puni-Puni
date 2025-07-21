@@ -55,11 +55,11 @@ html {
 }
 
 .spacer {
-  height: 150vh;
+  height: 100vh;
 }
 
 .element {
-  height: 200px;
+  height: 100px;
   background: coral;
   transition: transform 2s linear;
   display: flex;
@@ -89,6 +89,14 @@ html {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 4px white;
+}
+
+.header {
+    background-image: url('assets\\Logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
 }
 
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
