@@ -39,3 +39,18 @@ body::before {
         background-position: 15vw 15vw, center;
     }
 }
+
+.spacer {
+  height: 200vh;
+}
+
+.element {
+  height: 200px;
+  background: coral;
+  transition: transform 0.1s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  will-change: transform;
+}
