@@ -95,7 +95,6 @@ html {
     -webkit-text-stroke: 4px white;
 }
 
-
 .logo {
     background-image: url('assets\\Logo.png');
     background-repeat: no-repeat;
@@ -116,7 +115,7 @@ html {
 
 .categorie {
     font-family: ywCool;
-    font-size: 50px;
+    font-size: 55px;
     color: #EEEEEE;
 }
 
