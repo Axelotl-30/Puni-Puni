@@ -18,8 +18,6 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    width: 100vw;
-    max-width: 100vw;
 }
 
 body::before {
@@ -104,8 +102,6 @@ html {
   border-bottom-right-radius: 100% 50%;
   display: flex;
   justify-content: space-evenly;
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
 }
 
 
@@ -142,5 +138,11 @@ html {
         font-family: ywCool;
         font-size: calc(90vw*100/970.7);
         -webkit-text-stroke: calc(0.04*(90vw*100/970.7)) white;
+    }
+
+    .categorie {
+        font-family: ywCool;
+        font-size: 15px;
+        color: #EEEEEE;
     }
 }
