@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ywBig;
+    src: url('assets\\fonts\\FOT-RowdyStd-EB.otf');
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -31,6 +36,15 @@ body::before {
     animation: movePatern 10s linear infinite;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.element.animate {
+  transform: scale(1.2) rotate(10deg);
+  transition: transform 0.5s ease;
+}
+
 @keyframes movePatern {
     from {
         background-position: 0 0, center;
@@ -41,16 +55,54 @@ body::before {
 }
 
 .spacer {
-  height: 200vh;
+  height: 150vh;
 }
 
 .element {
   height: 200px;
   background: coral;
-  transition: transform 0.1s linear;
+  transition: transform 2s linear;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2em;
   will-change: transform;
+}
+
+.footer {
+    height: 50vh;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.footer > .gradient-text {
+    font-family: ywBig;
+    font-size: 100px;
+}
+
+.gradient-text {
+    display: inline-block; /* largeur de la div = largeur du texte */
+    line-height: 1; /* hauteur de la div = hauteur du texte */
+    background: -webkit-linear-gradient(left, #E65F42, #F6B03A, #C7BA31, #9CC328, #5CACCC);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px white;
+}
+
+@media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
+
+    body::before {
+        background-size: 15vh 15vh; /* le vh est plus adapté que le vw pour un téléphone */
+    }
+
+    @keyframes movePatern {
+        from {
+            background-position: 0 0, center;
+        }
+        to {
+            background-position: 15vh 15vh, center;
+        }
+    }
 }
