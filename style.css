@@ -84,7 +84,8 @@ html {
 
 .footer > .gradient-text {
     font-family: ywCool;
-    font-size: 100px;
+    font-size: calc(50vw*100/970.7);
+    -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
 }
 
 .gradient-text {
@@ -93,6 +94,7 @@ html {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 4px white;
+    background-size: 100% 1%;
 }
 
 .header {
@@ -133,5 +135,11 @@ html {
         to {
             background-position: 15vh 15vh, center;
         }
+    }
+
+    .footer > .gradient-text {
+        font-family: ywCool;
+        font-size: calc(90vw*100/970.7);
+        -webkit-text-stroke: calc(0.04*(90vw*100/970.7)) white;
     }
 }
