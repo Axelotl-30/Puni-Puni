@@ -119,7 +119,7 @@ html {
     color: #EEEEEE;
 }
 
-@media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
+@media (max-aspect-ratio: 1), (orientation: portrait){ /*donc l'écran est plus long que large */
 
     body::before {
         background-size: 15vh 15vh; /* le vh est plus adapté que le vw pour un téléphone */
