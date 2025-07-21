@@ -3,6 +3,11 @@
     src: url('assets\\fonts\\FOT-RowdyStd-EB.otf');
 }
 
+@font-face {
+    font-family: ywCool;
+    src: url('assets\\fonts\\fot-yuruka-std.ttf');
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -78,25 +83,40 @@ html {
 }
 
 .footer > .gradient-text {
-    font-family: ywBig;
+    font-family: ywCool;
     font-size: 100px;
 }
 
 .gradient-text {
     display: inline-block; /* largeur de la div = largeur du texte */
-    line-height: 1; /* hauteur de la div = hauteur du texte */
-    background: -webkit-linear-gradient(left, #E65F42, #F6B03A, #C7BA31, #9CC328, #5CACCC);
+    background: -webkit-linear-gradient(bottom left, #E65F42, #F6B03A, #C7BA31, #9CC328, #5CACCC);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 4px white;
 }
 
-.header {
+.logo {
     background-image: url('assets\\Logo.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     height: 500px;
+}
+
+.header {
+  width: 100%;
+  height: 150px;
+  background-color: #333333;
+  border-bottom-left-radius: 100% 50%;
+  border-bottom-right-radius: 100% 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.categorie {
+    font-family: ywCool;
+    font-size: 50px;
+    color: #EEEEEE;
 }
 
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
