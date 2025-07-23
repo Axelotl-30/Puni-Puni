@@ -62,8 +62,9 @@ html {
 }
 
 .popup {
-    width: 100vw;
-    height: 65vw;
+    width: 80vw;
+    height: calc(0.65*80vw);
+    margin: 10vw 0 0 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,5 +153,11 @@ html {
         font-family: ywCool;
         font-size: 15px;
         color: #EEEEEE;
+    }
+
+    .popup {
+        width: 100vw;
+        height: 65vw;
+        margin: 0;
     }
 }
