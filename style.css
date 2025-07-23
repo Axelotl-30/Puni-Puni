@@ -42,12 +42,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.popup.animate {
-    transform: scale(1);
-    opacity: 1;
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
 @keyframes movePatern {
     from {
         background-position: 0 0, center;
@@ -70,7 +64,13 @@ html {
     justify-content: center;
     will-change: transform;
     opacity: 0;
-    transform: scale(0.75);
+    transform: scale(0.65);
+}
+
+.bounce-in {
+    transform: scale(1);
+    opacity: 1;
+    transition: opacity 1s easeInBounce, transform 1s easeInBounce;
 }
 
 #popup1 {
