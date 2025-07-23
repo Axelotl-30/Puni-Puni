@@ -4,6 +4,8 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('animate');
     }
   });
+}, {
+  threshold: 0.25 // au moins 10% visible
 });
 
-document.querySelectorAll('.element').forEach(el => observer.observe(el));
+document.querySelectorAll('.popup').forEach(el => observer.observe(el));
