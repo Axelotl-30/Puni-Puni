@@ -201,7 +201,7 @@ html {
     color: white;
     background-image: url('assets/icons/shogunyan.png'), url('assets/icons/nyanmurai.png'), url('assets/icons/foudomyo.png');
     background-size: 20%, 20%, 20%;
-    animation: l2 1s infinite;
+    /* animation: l2 1s infinite; */
     z-index: 9999;
 }
 @keyframes l2 {
