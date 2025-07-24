@@ -23,3 +23,9 @@ window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
   preloader.style.display = 'none';
 });
+
+const word = document.getElementById('animated-word');
+word.innerHTML = word.textContent
+  .split('')
+  .map((letter, i) => `<span style="animation-delay:${i * 0.1}s">${letter}</span>`)
+  .join('');
