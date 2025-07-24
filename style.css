@@ -157,7 +157,7 @@ html {
     color: #EEEEEE;
 }
 
-.preloader {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -213,7 +213,7 @@ html {
         margin: 0;
     }
 
-    .preloader {
+    #preloader {
         background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh;
         background-size: 16vw, 16vw, 16vw;
     }
