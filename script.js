@@ -6,6 +6,7 @@ const observer = new IntersectionObserver((entries) => {
         duration: 0.65,
         opacity: 1,
         scale: 1,
+        rotate: 0,
         ease: "bounce.out"
       });
 
