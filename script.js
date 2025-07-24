@@ -18,3 +18,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll('.popup').forEach(el => observer.observe(el));
+
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+});
