@@ -207,9 +207,9 @@ html {
 @keyframes l2 {
   0%,
   70%,
-  100% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%}
-  14%  {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 100%}
-  28%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 100%}
-  42%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 0   }
-  56%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%}
+  100% {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 40%,calc(2*100%/3) 40%}
+  14%  {background-position: calc(0*100%/3) 20%,calc(1*100%/3) 40%,calc(2*100%/3) 40%}
+  28%  {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 20%  ,calc(2*100%/3) 40%}
+  42%  {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 40%,calc(2*100%/3) 20%}
+  56%  {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 40%,calc(2*100%/3) 40%}
 }
