@@ -198,18 +198,19 @@ html {
     left: 0;
     height: 100vh;
     width: 100vw;
-    color: white;
+    background-color: lightblue;
     background-image: url('assets/icons/shogunyan.png'), url('assets/icons/nyanmurai.png'), url('assets/icons/foudomyo.png');
-    background-size: 20%, 20%, 20%;
-    /* animation: l2 1s infinite; */
+    background-size: 10%, 10%, 10%;
+    background-repeat: no-repeat;
+    background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
+    animation: poyo 1.5s infinite;
     z-index: 9999;
 }
-@keyframes l2 {
-  0%,
-  70%,
-  100% {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 40%,calc(2*100%/3) 40%}
-  14%  {background-position: calc(0*100%/3) 20%,calc(1*100%/3) 40%,calc(2*100%/3) 40%}
-  28%  {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 20%  ,calc(2*100%/3) 40%}
-  42%  {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 40%,calc(2*100%/3) 20%}
-  56%  {background-position: calc(0*100%/3) 40%,calc(1*100%/3) 40%,calc(2*100%/3) 40%}
+@keyframes poyo {
+  0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10%, 10%, 10%;}
+  25% {background-position: 29vw 35vh, 45vw 45vh, 60vw 45vh; background-size: 12%, 10%, 10%;}
+  50% {background-position: 30vw 45vh, 44vw 35vh, 60vw 45vh; background-size: 10%, 12%, 10%;}
+  75% {background-position: 30vw 45vh, 45vw 45vh, 59vw 35vh; background-size: 10%, 10%, 12%;}
+  100% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10%, 10%, 10%;}
 }
