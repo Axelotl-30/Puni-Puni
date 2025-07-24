@@ -157,6 +157,29 @@ html {
     color: #EEEEEE;
 }
 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+    background-image: url('assets/icons/shogunyan.png'), url('assets/icons/nyanmurai.png'), url('assets/icons/foudomyo.png');
+    background-size: 10vw, 10vw, 10vw;
+    background-repeat: no-repeat;
+    background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
+    animation: poyo 1.5s infinite;
+    z-index: 9999;
+}
+@keyframes poyo {
+  0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
+  25% {background-position: 29vw 35vh, 45vw 45vh, 60vw 45vh; background-size: 12vw, 10vw, 10vw;}
+  50% {background-position: 30vw 45vh, 44vw 35vh, 60vw 45vh; background-size: 10vw, 12vw, 10vw;}
+  75% {background-position: 30vw 45vh, 45vw 45vh, 59vw 35vh; background-size: 10vw, 10vw, 12vw;}
+  100% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
+}
+
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
 
     body::before {
@@ -189,28 +212,18 @@ html {
         height: 65vw;
         margin: 0;
     }
-}
 
+    .preloader {
+        background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh;
+        background-size: 16vw, 16vw, 16vw;
+    }
 
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: lightblue;
-    background-image: url('assets/icons/shogunyan.png'), url('assets/icons/nyanmurai.png'), url('assets/icons/foudomyo.png');
-    background-size: 10%, 10%, 10%;
-    background-repeat: no-repeat;
-    background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh;
-    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
-    animation: poyo 1.5s infinite;
-    z-index: 9999;
-}
-@keyframes poyo {
-  0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10%, 10%, 10%;}
-  25% {background-position: 29vw 35vh, 45vw 45vh, 60vw 45vh; background-size: 12%, 10%, 10%;}
-  50% {background-position: 30vw 45vh, 44vw 35vh, 60vw 45vh; background-size: 10%, 12%, 10%;}
-  75% {background-position: 30vw 45vh, 45vw 45vh, 59vw 35vh; background-size: 10%, 10%, 12%;}
-  100% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10%, 10%, 10%;}
+    @keyframes poyo {
+        0% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
+        25% {background-position: 19vw 32vh, 42vw 42vh, 64vw 42vh; background-size: 18vw, 16vw, 16vw;}
+        50% {background-position: 20vw 42vh, 41vw 32vh, 64vw 42vh; background-size: 16vw, 18vw, 16vw;}
+        75% {background-position: 20vw 42vh, 42vw 42vh, 63vw 32vh; background-size: 16vw, 16vw, 18vw;}
+        100% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
+    }
+
 }
