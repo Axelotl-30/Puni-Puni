@@ -193,13 +193,16 @@ html {
 
 
 .preloader {
-  height: 100vh;
-  width: 100vw;
-  color: white;
-  background-image: url('assets/icons/shogunyan.png'), url('assets/icons/nyanmurai.png'), url('assets/icons/foudomyo.png');
-  background-size: 26% 3px;
-  animation: l2 1s infinite;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-image: url('assets/icons/shogunyan.png'), url('assets/icons/nyanmurai.png'), url('assets/icons/foudomyo.png');
+    background-size: 26% 3px;
+    animation: l2 1s infinite;
+    z-index: 9999;
 }
 @keyframes l2 {
   0%,
