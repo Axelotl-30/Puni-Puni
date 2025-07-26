@@ -285,17 +285,17 @@ html {
     }
 
     .nuage_container {
-        height: calc(1.5*30vw*873/2048);
+        height: calc(1.5*33vw*873/2048);
     }
 
     .nuage {
-        width: 30vw;
-        height: calc(30vw*873/2048);
+        width: 33vw;
+        height: calc(33vw*873/2048);
     }
 
     @keyframes floating {
         0% {top: 0;}
-        100% {top: calc(0.5*30vw*873/2048);}
+        100% {top: calc(0.5*33vw*873/2048);}
     }
 
 }
