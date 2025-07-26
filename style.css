@@ -198,11 +198,13 @@ html {
 #cre {
     background-image: url('assets/nuages/Credit_Pas.png');
     animation: floating 4.8s ease-in-out infinite alternate;
+    animation-delay: -3s;
 }
 
 #ins {
     background-image: url('assets/nuages/Instal_passelectionné.png');
     animation: floating 4.65s ease-in-out infinite alternate;
+    animation-delay: -1s;
 }
 
 #preloader {
