@@ -132,7 +132,7 @@ html {
     background-size: 100% 1%;
 }
 
-.header {
+/* .header {
   width: 100vw;
   height: 150px;
   background-color: #333333;
@@ -142,19 +142,19 @@ html {
   justify-content: space-evenly;
 }
 
-
-.logobi {
-    background-image: url('assets\\Logo.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 500px;
-}
-
 .categorie {
     font-family: ywCool;
     font-size: 55px;
     color: #EEEEEE;
+} */
+
+.header {
+    background-image: url('assets/head1.png');
+    width: 100vw;
+    height: calc(80vw*873/1440);
+    background-size: 80vw auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #preloader {
@@ -211,6 +211,11 @@ html {
         width: 100vw;
         height: 65vw;
         margin: 0;
+    }
+
+    .header {
+        height: calc(100vw*873/1440);
+        background-size: 100vw auto;
     }
 
     #preloader {
