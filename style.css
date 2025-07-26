@@ -55,7 +55,7 @@ html {
 @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) {
         .patern-overlay {
-            filter: brightness(1); /* Correction spécifique Safari */
+            filter: none; /* Correction spécifique Safari */
         }
     }
 }
