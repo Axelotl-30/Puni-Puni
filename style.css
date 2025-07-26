@@ -164,10 +164,45 @@ html {
 .header {
     background-image: url('assets/nuage_g.png'), url('assets/head.png'), url('assets/nuage_d.png');
     width: 100vw;
-    height: calc(83.3333333vw*1006/1728);
+    height: calc(100vw*886/1780);
     background-size: 10vw auto, 80vw auto, 10vw auto;
     background-repeat: no-repeat;
     background-position: left top, center top, right top;
+}
+
+.nuage_container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: calc(1.5*26.4vw*873/2048);
+}
+
+.nuage {
+    width: 26.4vw;
+    height: calc(26.4vw*873/2048);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+@keyframes floating {
+    0% {top: 0;}
+    100% {top: calc(0.5*26.4vw*873/2048);}
+}
+
+#pre {
+    background-image: url('assets/nuages/Presentation_selectionné.png');
+    animation: floating 4.5s ease-in-out infinite alternate;
+}
+
+#cre {
+    background-image: url('assets/nuages/Credit_Pas.png');
+    animation: floating 4.8s ease-in-out infinite alternate;
+}
+
+#ins {
+    background-image: url('assets/nuages/Instal_passelectionné.png');
+    animation: floating 4.65s ease-in-out infinite alternate;
 }
 
 #preloader {
@@ -232,7 +267,7 @@ html {
     }
 
     .header {
-        height: calc(100vw*1000/1440);
+        height: calc(100vw*886/1424);
         background-size: 100vw auto;
     }
 
@@ -247,6 +282,20 @@ html {
         50% {background-position: 20vw 42vh, 41vw 32vh, 64vw 42vh; background-size: 16vw, 18vw, 16vw;}
         75% {background-position: 20vw 42vh, 42vw 42vh, 63vw 32vh; background-size: 16vw, 16vw, 18vw;}
         100% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
+    }
+
+    .nuage_container {
+        height: calc(1.5*30vw*873/2048);
+    }
+
+    .nuage {
+        width: 30vw;
+        height: calc(30vw*873/2048);
+    }
+
+    @keyframes floating {
+        0% {top: 0;}
+        100% {top: calc(0.5*30vw*873/2048);}
     }
 
 }
