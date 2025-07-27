@@ -27,12 +27,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/patern.png');
+    background-image: url('assets/patern2.png');
     background-size: 15vw 15vw;
     background-repeat: repeat;
     background-position: 0 0;
     opacity: 0.15; /* sur le patern de yokai watch 1 l'opacité semble être à 10% mais 15 est ce qui est le plus fidèle au résultat*/
-    filter: brightness(100); /* objectif avoir un blanc bien pétant 255 */
+    /* filter: brightness(100); objectif avoir un blanc bien pétant 255 */
     pointer-events: none;
     z-index: -1;
     animation: movePatern 10s linear infinite;
@@ -52,13 +52,13 @@ html {
 }
 
 /* Safari uniquement */
-@media not all and (min-resolution: 0.001dpcm) {
+/* @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) {
         .patern-overlay {
-            filter: none; /* Correction spécifique Safari */
+            filter: none;
         }
     }
-}
+} */
 
 #preloader {
   position: fixed;
@@ -184,6 +184,10 @@ html {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
+}
+
+.nuage:hover {
+    transform: scale(1.2);
 }
 
 @keyframes floating {
