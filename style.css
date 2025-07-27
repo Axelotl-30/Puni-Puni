@@ -171,40 +171,51 @@ html {
 }
 
 .nuage_container {
+    width: 80vw;
     display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: calc(1.5*26.4vw*873/2048);
+    margin: 0 10vw 0 10vw;
+    height: calc(1.5*33vw*655/2048);
 }
 
 .nuage {
-    width: 26.4vw;
-    height: calc(26.4vw*873/2048);
+    width: 33vw;
+    height: calc(33vw*873/2048);
+    flex-shrink: 0; /*empêche les nuages d'être resize par le conteneur*/
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
 }
 
 @keyframes floating {
-    0% {top: 0;}
-    100% {top: calc(0.5*26.4vw*873/2048);}
+    0% {top: calc(100vw*760/1780);}
+    100% {top: calc(0.5*33vw*655/2048 + 100vw*760/1780);}
+}
+
+@keyframes floating_center {
+    0% {top: calc(100vw*800/1780);}
+    100% {top: calc(0.5*33vw*655/2048 + 100vw*800/1780);}
 }
 
 #pre {
     background-image: url('assets/nuages/Presentation_selectionné.png');
-    animation: floating 4.5s ease-in-out infinite alternate;
+    animation: floating 4.2s ease-in-out infinite alternate;
+    transform: rotate(7deg);
+    left: 10vw;
 }
 
 #cre {
     background-image: url('assets/nuages/Credit_Pas.png');
-    animation: floating 4.8s ease-in-out infinite alternate;
+    animation: floating_center 4.5s ease-in-out infinite alternate;
     animation-delay: -3s;
+    left: 33.5vw;
 }
 
 #ins {
     background-image: url('assets/nuages/Instal_passelectionné.png');
-    animation: floating 4.65s ease-in-out infinite alternate;
+    animation: floating 4.35s ease-in-out infinite alternate;
     animation-delay: -1s;
+    transform: rotate(-7deg);
+    right: 10vw;
 }
 
 #preloader {
@@ -287,17 +298,36 @@ html {
     }
 
     .nuage_container {
-        height: calc(1.5*33vw*873/2048);
+        width: 100vw;
+        margin: 0;
+        height: calc(1.5*41.25vw*655/2048);
     }
 
     .nuage {
-        width: 33vw;
-        height: calc(33vw*873/2048);
+        width: 41.25vw;
+        height: calc(41.25vw*873/2048);
     }
 
     @keyframes floating {
-        0% {top: 0;}
-        100% {top: calc(0.5*33vw*873/2048);}
+        0% {top: calc(100vw*760/1424);}
+        100% {top: calc(0.5*41.25vw*655/2048 + 100vw*760/1424);}
+    }
+
+    @keyframes floating_center {
+        0% {top: calc(100vw*800/1424);}
+        100% {top: calc(0.5*41.25vw*655/2048 + 100vw*800/1424);}
+    }
+
+    #pre {
+        left: 0vw;
+    }
+
+    #cre {
+        left: 29.375vw;
+    }
+
+    #ins {
+        right: 0vw;
     }
 
 }
