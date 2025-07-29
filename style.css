@@ -119,19 +119,29 @@ html {
     height: 200vh;
     background-color: transparent;
     display: flex;
-    justify-content: center;
-    align-items: top;
-    background-image: url('assets/pad/Corne_Pad_Gauche.png'), url('assets/pad/Corne_Pad_Droite.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Bouche_Pad.png'), url('assets/pad/black.png');
-    background-size: calc(24vw) calc(24vw*1192/1945), calc(24vw) calc(24vw*1192/1945), 24vw 24vw, 24vw 24vw, 80vw auto, 100vw calc(200vh - 20vw*1192/1945);
-    background-position: left top, right top, 5vw calc(24vw*1192/1945 + 10vw), 71vw calc(24vw*1192/1945 + 10vw), center calc(24vw*1192/1945 + 10vw + 24vw + 10vw), left calc(24vw*1111/1945);
+    background-image: url('assets/pad/Oreille_Pad_G.png'), url('assets/pad/Oreille_Pad_D.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Bouche_Pad.png'), url('assets/pad/black.png');
+    background-size: calc(24vw) calc(24vw*977/1442), calc(24vw) calc(24vw*977/1442), 24vw 24vw, 24vw 24vw, 80vw auto, 100vw calc(100vw - 24vw*977/1442);
+    background-position: left top, right top, 5vw calc(24vw*977/1442 + 10vw), 71vw calc(24vw*977/1442 + 10vw), center calc(24vw*977/1442 + 10vw + 24vw + 10vw), left calc(24vw*977/1442);
     background-repeat: no-repeat;
+    border-bottom-left-radius: 10%; 
+    border-bottom-right-radius: 10%;
 }
 
-.footer > .gradient-text {
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 95vw;
+    height: calc(95vw - 24vw*977/1442);
+    margin: calc(24vw*977/1442 + 2.5vw) 2.5vw 2.5vw 2.5vw;
+    background-color: rgba(84, 84, 84, 0.33);
+    border-radius: 10%;
+}
+
+.screen > .gradient-text {
     font-family: ywCool;
     font-size: calc(50vw*100/970.7);
     -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
-    margin-top: calc(24vw*1192/1945);
 }
 
 .gradient-text {
@@ -274,12 +284,17 @@ html {
     .footer > .gradient-text {
         font-size: calc(90vw*100/970.7);
         -webkit-text-stroke: calc(0.04*(90vw*100/970.7)) white;
-        margin-top: calc(30vw*1192/1945);
+        margin-top: calc(30vw*977/1442);
     }
 
     .footer {
-        background-size: 30vw calc(30vw*1192/1945), 30vw calc(30vw*1192/1945), 30vw 30vw, 30vw 30vw, 80vw auto, 100vw calc(200vh - 20vw*1192/1945);
-        background-position: left top, right top, 5vw calc(30vw*1192/1945 + 10vw), 65vw calc(30vw*1192/1945 + 10vw), center calc(30vw*1192/1945 + 10vw + 30vw + 10vw), left calc(30vw*1111/1945);
+        background-size: 30vw calc(30vw*977/1442), 30vw calc(30vw*977/1442), 30vw 30vw, 30vw 30vw, 80vw auto, 100vw calc(100vw - 20vw*977/1442);
+        background-position: left top, right top, 5vw calc(30vw*977/1442 + 10vw), 65vw calc(30vw*977/1442 + 10vw), center calc(30vw*977/1442 + 10vw + 30vw + 10vw), left calc(30vw*977/1442);
+    }
+
+    .screen {
+        height: calc(95vw -  20vw*977/1442);
+        margin: calc(20vw*977/1442 + 2.5vw) 2.5vw 2.5vw 2.5vw;
     }
 
     .categorie {
