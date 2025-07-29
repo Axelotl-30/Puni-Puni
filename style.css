@@ -358,7 +358,7 @@ html {
 
 .img-comp-container {
     position: relative;
-    height: 142.22222vw; /*should be the same height as the images*/
+    height: calc(60vw*2560/1440*1px); /*should be the same height as the images*/
 }
 
 .img-comp-img {
@@ -370,7 +370,6 @@ html {
 
 .img-comp-img img {
     display:block;
-    height: 142.2222vw;;
 }
 
 .img-comp-slider {
