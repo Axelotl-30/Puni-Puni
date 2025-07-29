@@ -29,6 +29,33 @@ window.addEventListener('load', () => {
   preloader.style.display = 'none';
 });
 
+function resizeImagesToViewport() {
+  const viewportWidth = window.innerWidth;
+  const widthInPixels = 0.6 * viewportWidth;
+  const heightInPixels = widthInPixels * 2560/1440;
+  
+  document.querySelectorAll('.img-comp-img img').forEach(img => {
+    img.setAttribute('width',  widthInPixels);
+    img.removeAttribute('height', heightInPixels); // facultatif : évite déformation si ratio est important
+  });
+
+  document.querySelectorAll('.img-comp-container').forEach(container => {
+    
+    container.style.height = `${heightInPixels}px`;
+  });
+
+  document.querySelectorAll('.img-comp-slider').forEach(el => el.remove());
+
+  initComparisons();
+
+  document.querySelectorAll('.img-comp-slider').forEach(slider => {
+    slider.style.top = `${heightInPixels/2-20}px`;
+    slider.style.left = `${widthInPixels/2-20}px`
+  });
+
+  
+}
+
 function initComparisons() {
     var x, i;
     /*find all elements with an "overlay" class:*/
@@ -51,8 +78,8 @@ function initComparisons() {
         /*insert slider*/
         img.parentElement.insertBefore(slider, img);
         /*position the slider in the middle:*/
-        slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-        slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+        // slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px"; ici c'est activé de base
+        // slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px"; ici c'est activé de base
         /*execute a function when the mouse button is pressed:*/
         slider.addEventListener("mousedown", slideReady);
         /*and another function when the mouse button is released:*/
@@ -106,4 +133,11 @@ function initComparisons() {
     }
     }
 
-    initComparisons();
+// Exécute une première fois
+resizeImagesToViewport();
+
+// Et à chaque redimensionnement
+window.addEventListener('resize', resizeImagesToViewport);
+
+    
+  
