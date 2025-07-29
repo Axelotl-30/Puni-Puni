@@ -116,7 +116,7 @@ html {
 
 
 .footer {
-    height: 200vh;
+    height: 100vw;
     background-color: transparent;
     display: flex;
     background-image: url('assets/pad/Oreille_Pad_G.png'), url('assets/pad/Oreille_Pad_D.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Bouche_Pad.png'), url('assets/pad/black.png');
