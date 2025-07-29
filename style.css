@@ -92,30 +92,28 @@ html {
 }
 
 .popup {
-    width: 80vw;
-    height: calc(0.65*80vw);
-    margin: 10vw 0 0 10vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 60vw;
+    height: calc(60vw*2560/1440);
+    margin: 20vw 0 0 20vw;
     will-change: transform;
-    opacity: 0;
-    transform: scale(0.65);
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
 }
 
-.bounce-in {
-    transform: scale(1);
-    opacity: 1;
-    transition: opacity 1s easeInBounce, transform 1s easeInBounce;
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.65);
+    background-size: cover;
+    background-position: center;
 }
 
-#popup1 {
-    background-image: url('assets/popups/test_text.png'), url('assets/popups/test_img.png');
-    background-position: left top, right top;
-    background-size: contain, contain;
-    background-repeat: no-repeat;
-}
+.layer1 { background-image: url('assets/popups/p1img1.png'); }
+.layer2 { background-image: url('assets/popups/p1img2.png'); }
+.layer3 { background-image: url('assets/popups/p1img3.png'); }
+
 
 .footer {
     height: 200vh;
@@ -291,10 +289,12 @@ html {
     }
 
     .popup {
+        position: relative;
         width: 100vw;
-        height: 65vw;
+        height: calc(100vw*2560/1440);
         margin: 0;
     }
+
 
     .header {
         height: calc(100vw*886/1424);
@@ -351,4 +351,36 @@ html {
         top: calc(100vw*850/1424);
     }
 
+}
+
+
+* {box-sizing: border-box;}
+
+.img-comp-container {
+    position: relative;
+    height: 142.22222vw; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow:hidden;
+}
+
+.img-comp-img img {
+    display:block;
+    height: 142.2222vw;;
+}
+
+.img-comp-slider {
+    position: absolute;
+    z-index:9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    opacity: 0.7;
+    border-radius: 50%;
 }
