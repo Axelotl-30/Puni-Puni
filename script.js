@@ -43,13 +43,28 @@ function switch_character(side){
   const character = document.querySelector('.character');
   character.style.backgroundImage = `url('${Lcharacters[characterIndex]}')`;
   character.style.opacity = 0; // Reset opacity for fade-in effect
-  character.style.backgroundSize = '15vw auto'; // Reset scale for bounce effect
 
-  gsap.to(character, {
-    duration: 0.65,
-    opacity: 1,
-    backgroundSize: '30vw auto',
-    rotate: 0,
-    ease: "bounce.out"
-  });
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  if (width < height) {
+    character.style.backgroundSize = '25vw auto'; // Reset scale for bounce effect
+    gsap.to(character, {
+      duration: 0.65,
+      opacity: 1,
+      backgroundSize: '50vw auto',
+      rotate: 0,
+      ease: "bounce.out"
+    });
+  } else {
+    character.style.backgroundSize = '15vw auto'; // Reset scale for bounce effect
+    gsap.to(character, {
+      duration: 0.65,
+      opacity: 1,
+      backgroundSize: '30vw auto',
+      rotate: 0,
+      ease: "bounce.out"
+    });
+  }
+  
 }
