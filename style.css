@@ -8,6 +8,11 @@
     src: url('assets\\fonts\\fot-yuruka-std.ttf');
 }
 
+@font-face {
+    font-family: sub;
+    src: url('assets\\fonts\\FOT-SeuratProN-B.otf');
+}
+
 body {
     position: relative;
     background-image: url('assets/background.png');
@@ -50,15 +55,6 @@ html {
         background-position: 15vw 15vw, center;
     }
 }
-
-/* Safari uniquement */
-/* @media not all and (min-resolution: 0.001dpcm) {
-    @supports (-webkit-appearance: none) {
-        .patern-overlay {
-            filter: none;
-        }
-    }
-} */
 
 #preloader {
   position: fixed;
@@ -153,6 +149,17 @@ html {
 .ctext {background-image: url('assets/popups/Slide_Text.png'); pointer-events: none;}
 
 .cpuni {background-image: url('assets/popups/Puni_Komami.png'); pointer-events: none;}
+
+.subtext{
+    position: relative;
+    top: calc(-60vw*520/1440);
+    align-content: center;
+    text-align: center;
+    font-family: sub;
+    font-size: 1.5vw;
+    color: #222222
+}
+
 .footer {
     height: 100vw;
     background-color: transparent;
@@ -393,5 +400,10 @@ html {
 
     .right_arrow {
         left: 55vw;
+    }
+
+    .subtext{
+        top: calc(-60vw*700/1440);
+        font-size: 2.5vw;
     }
 }
