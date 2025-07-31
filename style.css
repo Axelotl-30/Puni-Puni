@@ -115,6 +115,11 @@ html {
 .layer3 { background-image: url('assets/popups/p1img3.png'); }
 
 
+.layer4 { background-image: url('assets/popups/p2img1.png'); }
+.layer5 { background-image: url('assets/popups/p2img2.png'); }
+.layer6 { background-image: url('assets/popups/p2img3.png'); }
+
+
 .footer {
     height: 100vw;
     background-color: transparent;
