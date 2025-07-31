@@ -120,9 +120,8 @@ html {
 .layer5 { background-image: url('assets/popups/p2img2.png'); }
 .layer6 { background-image: url('assets/popups/p2img3.png'); }
 
-.character_selector{transform: rotate(-8deg);}
-
 .left_arrow {
+    transform: rotate(-8deg);
     top: 0;
     left: 0;
     width: 5vw;
@@ -130,6 +129,7 @@ html {
     background-image: url('assets/popups/Slide_FlecheG.png');
 }
 .character {
+    transform: rotate(-8deg);
     top: 0;
     left: 5vw;
     width: 30vw;
@@ -138,6 +138,7 @@ html {
 }
 
 .right_arrow {
+    transform: rotate(-8deg);
     top: 0;
     left: 35vw;
     width: 5vw;

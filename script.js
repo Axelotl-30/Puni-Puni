@@ -10,7 +10,6 @@ const observer = new IntersectionObserver((entries) => {
           duration: 0.65,
           opacity: 1,
           scale: 1,
-          rotate: 0,
           ease: "bounce.out"
         }, index * 0.2); // décalage dans le temps pour cascade
       });
@@ -57,7 +56,6 @@ function switch_character(side){
       duration: 0.65,
       opacity: 1,
       backgroundSize: '50vw auto',
-      rotate: 0,
       ease: "bounce.out"
     });
 
@@ -66,7 +64,6 @@ function switch_character(side){
       duration: 0.65,
       opacity: 1,
       backgroundSize: '100vw auto',
-      rotate: 0,
       ease: "bounce.out"
     });
 
@@ -76,7 +73,6 @@ function switch_character(side){
       duration: 0.65,
       opacity: 1,
       backgroundSize: '30vw auto',
-      rotate: 0,
       ease: "bounce.out"
     });
 
@@ -85,7 +81,6 @@ function switch_character(side){
       duration: 0.65,
       opacity: 1,
       backgroundSize: '60vw auto',
-      rotate: 0,
       ease: "bounce.out"
     });
   }
