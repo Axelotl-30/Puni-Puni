@@ -100,8 +100,6 @@ html {
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
 }
 
-.character_selector {width: 80vw; margin: 10vw 0 0 10vw;}
-
 .layer {
     position: absolute;
     width: 100%;
@@ -122,26 +120,28 @@ html {
 .layer5 { background-image: url('assets/popups/p2img2.png'); }
 .layer6 { background-image: url('assets/popups/p2img3.png'); }
 
+.character_selector{transform: rotate(-8deg);}
+
 .left_arrow {
     top: 0;
     left: 0;
-    width: 10vw;
-    background-size: 10vw auto;
+    width: 5vw;
+    background-size: 5vw auto;
     background-image: url('assets/popups/Slide_FlecheG.png');
 }
 .character {
     top: 0;
-    left: 10vw;
-    width: 60vw;
-    background-size: 60vw auto;
+    left: 5vw;
+    width: 30vw;
+    background-size: 30vw auto;
     background-image: url('assets/popups/Slide_Komami.png');
 }
 
 .right_arrow {
     top: 0;
-    right: 0;
-    width: 10vw;
-    background-size: 10vw auto;
+    left: 35vw;
+    width: 5vw;
+    background-size: 5vw auto;
     background-image: url('assets/popups/Slide_FlecheD.png');
 }
 
@@ -157,8 +157,6 @@ html {
     background-size: calc(24vw) calc(24vw*977/1442), calc(24vw) calc(24vw*977/1442), 24vw 24vw, 24vw 24vw, 80vw auto, 100vw calc(100vw - 24vw*977/1442);
     background-position: left top, right top, 5vw calc(24vw*977/1442 + 10vw), 71vw calc(24vw*977/1442 + 10vw), center calc(24vw*977/1442 + 10vw + 24vw + 10vw), left calc(24vw*977/1442);
     background-repeat: no-repeat;
-    border-bottom-left-radius: 10%; 
-    border-bottom-right-radius: 10%;
 }
 
 .screen {
@@ -383,12 +381,4 @@ html {
     .header_gradient {
         top: calc(100vw*850/1424);
     }
-
-    .character_selector {width: 100vw; margin: 0;}
-
-    .character {
-        width: 80vw;
-        background-size: 80vw auto;
-    }
-
 }
