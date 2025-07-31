@@ -145,6 +145,10 @@ html {
     background-image: url('assets/popups/Slide_FlecheD.png');
 }
 
+.left_arrow:hover, .right_arrow:hover {
+    cursor: pointer;
+}
+
 .footer {
     height: 100vw;
     background-color: transparent;
