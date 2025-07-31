@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 });
 
 
-const Lcharacters = ["assets/popups/Slide_Komami.png","assets/popups/Slide_Mika.png","assets/popups/Slide_Nyarthur.png","assets/popups/Slide_Ryuta.png","assets/popups/Slide_WyvernKing.png"];
+const Lcharacters = ["Komami.png","Mika.png","Nyarthur.png","Ryuta.png","WyvernKing.png"];
 let characterIndex = 0;
 
 function switch_character(side){
@@ -41,9 +41,13 @@ function switch_character(side){
   }else {return;} // Invalid side
 
   const character = document.querySelector('.character');
-  character.style.backgroundImage = `url('${Lcharacters[characterIndex]}')`;
-  character.style.opacity = 0; // Reset opacity for fade-in effect
+  character.style.backgroundImage = `url('assets/popups/Slide_${Lcharacters[characterIndex]}')`;
+  const puni = document.querySelector('.cpuni');
+  puni.style.backgroundImage = `url('assets/popups/Puni_${Lcharacters[characterIndex]}')`;
 
+  character.style.opacity = 0; // Reset opacity for fade-in effect
+  puni.style.opacity = 0;
+  
   const width = window.innerWidth;
   const height = window.innerHeight;
 
@@ -56,12 +60,31 @@ function switch_character(side){
       rotate: 0,
       ease: "bounce.out"
     });
+
+    puni.style.backgroundSize = '50vw auto';
+    gsap.to(puni, {
+      duration: 0.65,
+      opacity: 1,
+      backgroundSize: '100vw auto',
+      rotate: 0,
+      ease: "bounce.out"
+    });
+
   } else {
     character.style.backgroundSize = '15vw auto'; // Reset scale for bounce effect
     gsap.to(character, {
       duration: 0.65,
       opacity: 1,
       backgroundSize: '30vw auto',
+      rotate: 0,
+      ease: "bounce.out"
+    });
+
+    puni.style.backgroundSize = '30vw auto';
+    gsap.to(puni, {
+      duration: 0.65,
+      opacity: 1,
+      backgroundSize: '60vw auto',
       rotate: 0,
       ease: "bounce.out"
     });
