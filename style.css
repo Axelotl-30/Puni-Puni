@@ -381,4 +381,13 @@ html {
     .header_gradient {
         top: calc(100vw*850/1424);
     }
+
+    .character {
+        width: 50vw;
+        background-size: 50vw auto;
+    }
+
+    .right_arrow {
+        left: 55vw;
+    }
 }
