@@ -134,7 +134,7 @@ html {
     left: 10vw;
     width: 60vw;
     background-size: 60vw auto;
-    background-image: url('assets/popups/Slide_Nyarthur.png');
+    background-image: url('assets/popups/Slide_Komami.png');
 }
 
 .right_arrow {
@@ -382,6 +382,13 @@ html {
 
     .header_gradient {
         top: calc(100vw*850/1424);
+    }
+
+    .character_selector {width: 100vw; margin: 0;}
+
+    .character {
+        width: 80vw;
+        background-size: 80vw auto;
     }
 
 }
