@@ -149,6 +149,9 @@ html {
     cursor: pointer;
 }
 
+.ctext {background-image: url('assets/popups/Slide_Text.png'); pointer-events: none;}
+
+.cpuni {background-image: url('assets/popups/Puni_Komami.png'); pointer-events: none;}
 .footer {
     height: 100vw;
     background-color: transparent;
