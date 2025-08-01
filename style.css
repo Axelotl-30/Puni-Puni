@@ -147,8 +147,8 @@ html {
 }
 
 .ctext {background-image: url('assets/popups/Slide_Text.png'); pointer-events: none;}
-
 .cpuni {background-image: url('assets/popups/Puni_Komami.png'); pointer-events: none;}
+.update_text {background-image: url('assets/popups/text_translation.png'); pointer-events: none;}
 
 .subtext{
     position: relative;
@@ -172,8 +172,7 @@ html {
 
 .screen {
     display: flex;
-    justify-content: center;
-    align-items: top;
+    flex-direction: column;
     width: 95vw;
     height: calc(95vw - 24vw*977/1442);
     margin: calc(24vw*977/1442 + 2.5vw) 2.5vw 2.5vw 2.5vw;
@@ -182,12 +181,27 @@ html {
 }
 
 .screen > .gradient-text {
+    margin: 0 auto 0 auto;
+    height: calc(1.5*50vw*100/970.7);
     font-family: ywCool;
     font-size: calc(50vw*100/970.7);
     -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
 }
 
+a > .gradient-text {
+    margin: auto 0 auto 4vw;
+    height: calc(1*50vw*100/970.7);
+    font-family: ywCool;
+    font-size: calc(0.66*50vw*100/970.7);
+    -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
+    top: 0;
+    position: static;
+    left: 25vw;
+}
+
 .gradient-text {
+    text-align: center;
+    align-items: center;
     display: inline-block; /* largeur de la div = largeur du texte */
     background: -webkit-linear-gradient(bottom left, #E65F42, #F6B03A, #C7BA31, #9CC328, #5CACCC);
     background-clip: text;
@@ -196,6 +210,14 @@ html {
     background-size: 100% 1%;
 }
 
+iframe {
+    width: 60vw;
+    height: calc(60vw*9/16);
+    margin: 0 20vw 0 20vw;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
+}
 .header {
     background-image: url('assets/nuage_g.png'), url('assets/head.png'), url('assets/nuage_d.png');
     width: 100vw;
@@ -291,6 +313,11 @@ html {
   50% {background-position: 30vw 45vh, 44vw 35vh, 60vw 45vh; background-size: 10vw, 12vw, 10vw;}
   75% {background-position: 30vw 45vh, 45vw 45vh, 59vw 35vh; background-size: 10vw, 10vw, 12vw;}
   100% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
