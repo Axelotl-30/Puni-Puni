@@ -161,6 +161,7 @@ html {
 }
 
 .footer {
+    margin: 10vh 0 0 0;
     height: 100vw;
     background-color: transparent;
     display: flex;
@@ -181,22 +182,91 @@ html {
 }
 
 .screen > .gradient-text {
-    margin: 0 auto 0 auto;
+    margin: 0 auto 10vw auto;
     height: calc(1.5*50vw*100/970.7);
     font-family: ywCool;
     font-size: calc(50vw*100/970.7);
     -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2.5vw;
+}
+
+#ytb::before, #ytb::after,
+#mail::before, #mail::after,
+#dcd::before, #dcd::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 12.5vw; height: 12.5vw;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 2.5vw;
+}
+
+#ytb::before {
+    background-image: url('assets/icons/youtube_icon.png');
+    opacity: 1;
+}
+
+#mail::before {
+    background-color: #5CACCC;
+    background-image: url('assets/icons/mail.png');
+    opacity: 1;
+}
+
+#dcd::before {
+    background-image: url('assets/icons/discord_icon.png');
+    opacity: 1;
+}
+
+#ytb::after{
+    background-image: url('assets/icons/wibwob.png');
+    opacity: 0;
+}
+
+#mail::after {
+    background-image: url('assets/icons/gmail.png');
+    opacity: 0;
+}
+
+#dcd::after {
+    background-image: url('assets/icons/server.jpg');
+    opacity: 0;
+}
+
+#ytb:hover::before, #mail:hover::before, #dcd:hover::before {
+    opacity: 0;
+}
+
+#ytb:hover::after, #mail:hover::after, #dcd:hover::after {
+    opacity: 1;
+}
+
+#ytb, #mail, #dcd {
+    background-size: 12.5vw;
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 12.5vw;
+    width: 37vw;
+    position: relative;
+    overflow: hidden;
+}
+
 a > .gradient-text {
-    margin: auto 0 auto 4vw;
-    height: calc(1*50vw*100/970.7);
+    box-sizing: content-box;
+    margin: auto 0 auto 15vw;
+    height: calc(1.21*50vw*100/970.7);
     font-family: ywCool;
-    font-size: calc(0.66*50vw*100/970.7);
+    font-size: calc(0.80*50vw*100/970.7);
     -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
-    top: 0;
-    position: static;
-    left: 25vw;
 }
 
 .gradient-text {
@@ -218,6 +288,7 @@ iframe {
     border-radius: 20px;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
 }
+
 .header {
     background-image: url('assets/nuage_g.png'), url('assets/head.png'), url('assets/nuage_d.png');
     width: 100vw;
@@ -307,17 +378,13 @@ iframe {
     animation: poyo 1.5s infinite;
     z-index: 9999;
 }
+
 @keyframes poyo {
   0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
   25% {background-position: 29vw 35vh, 45vw 45vh, 60vw 45vh; background-size: 12vw, 10vw, 10vw;}
   50% {background-position: 30vw 45vh, 44vw 35vh, 60vw 45vh; background-size: 10vw, 12vw, 10vw;}
   75% {background-position: 30vw 45vh, 45vw 45vh, 59vw 35vh; background-size: 10vw, 10vw, 12vw;}
   100% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
@@ -333,12 +400,6 @@ a {
         to {
             background-position: 15vh 15vh, center;
         }
-    }
-
-    .footer > .gradient-text {
-        font-size: calc(90vw*100/970.7);
-        -webkit-text-stroke: calc(0.04*(90vw*100/970.7)) white;
-        margin-top: calc(30vw*977/1442);
     }
 
     .footer {
@@ -432,5 +493,12 @@ a {
     .subtext{
         top: calc(-60vw*700/1440);
         font-size: 2.5vw;
+    }
+
+    iframe {
+        width: 100vw;
+        height: calc(100vw*9/16);
+        margin: 0;
+        border-radius: 20px;
     }
 }
