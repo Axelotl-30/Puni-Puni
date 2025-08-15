@@ -1,0 +1,11 @@
+body {
+    margin: 0 20vw 0 20vw;
+}
+
+.separator{
+    width: 60vw;
+    height: 0;
+    border-width: 3px;
+    background-color: transparent;
+    border-style: dashed;
+}

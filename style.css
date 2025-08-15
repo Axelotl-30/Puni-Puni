@@ -315,13 +315,13 @@ iframe {
     display: flex;
     margin: 0 10vw 0 10vw;
     height: calc(1.5*33vw*655/2048);
-    z-index: 23;
+    z-index: 9;
 }
 
 .nuage {
     width: 33vw;
     height: calc(33vw*873/2048);
-    flex-shrink: 0; /*empêche les nuages d'être resize par le conteneur*/
+    flex-shrink: 0;
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -361,6 +361,18 @@ iframe {
     animation-delay: -1s;
     transform: rotate(-7deg);
     right: 10vw;
+}
+
+.hitbox {
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(80vw/3);
+    height: 100%;
+    z-index: 999; /* toujours au-dessus */
+    background: transparent; /* invisible */
+    cursor: pointer;
 }
 
 #preloader {
