@@ -100,7 +100,6 @@ h1 {
 .GTP:hover{
     transform: scale(1.2);
     background: linear-gradient(135deg, #6666ff, #ff6666);
-    white-space: nowrap;
 }
 
 .apk {
