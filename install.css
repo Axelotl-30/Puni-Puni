@@ -100,10 +100,14 @@ h1 {
 .GTP:hover{
     transform: scale(1.2);
     background: linear-gradient(135deg, #6666ff, #ff6666);
+    white-space: nowrap;
 }
 
 .apk {
     margin: 15px;
+    width: auto;
+    padding: 5px;
+    border-radius: 35px;
 }
 
 .header {
@@ -287,10 +291,16 @@ h1 {
         100% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
     }
 
-    .apk{
+    .GTP {
         width: 60vw;
         height: calc(60vw*12/100);
-        font-size: medium;
+    }
+
+    .apk{
+        width: auto;
+        height: calc(60vw*12/100);
+        font-size: large;
+        border-radius: 25px;
     }
 
 }
