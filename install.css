@@ -1,0 +1,91 @@
+@font-face {
+    font-family: ywBig;
+    src: url('assets\\fonts\\FOT-RowdyStd-EB.otf');
+}
+
+@font-face {
+    font-family: ywCool;
+    src: url('assets\\fonts\\fot-yuruka-std.ttf');
+}
+
+@font-face {
+    font-family: sub;
+    src: url('assets\\fonts\\FOT-SeuratProN-B.otf');
+}
+
+
+body {
+    position: relative;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/patern2.png');
+    background-size: 15vw 15vw;
+    background-repeat: repeat;
+    background-position: 0 0;
+    opacity: 0.15; /* sur le patern de yokai watch 1 l'opacité semble être à 10% mais 15 est ce qui est le plus fidèle au résultat*/
+    /* filter: brightness(100); objectif avoir un blanc bien pétant 255 */
+    pointer-events: none;
+    z-index: -1;
+    animation: movePatern 10s linear infinite;
+}
+
+@keyframes movePatern {
+    from {
+        background-position: 0 0, center;
+    }
+    to {
+        background-position: 15vw 15vw, center;
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sub;
+    font-size: larger;
+    width: 60vw;
+    margin: 0 20vw 0 20vw;
+}
+
+h1 {
+    font-family: ywCool;
+}
+
+.separator{
+    width: 60vw;
+    height: 0;
+    border-width: 3px;
+    background-color: transparent;
+    border-style: dashed;
+}
+
+@media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
+    .separator{
+        width: 100vw;
+    }
+
+    .container {
+        width: 100vw;
+        margin: 0;
+    }
+}
