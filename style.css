@@ -348,15 +348,15 @@ iframe {
     left: 10vw;
 }
 
-#cre {
-    background-image: url('assets/nuages/Credit_Pas.png');
+#ins {
+    background-image: url('assets/nuages/Instal_passelectionné.png');
     animation: floating_center 4.5s ease-in-out infinite alternate;
     animation-delay: -3s;
     left: 33.5vw;
 }
 
-#ins {
-    background-image: url('assets/nuages/Instal_passelectionné.png');
+#cre {
+    background-image: url('assets/nuages/Credit_Pas.png');
     animation: floating 4.35s ease-in-out infinite alternate;
     animation-delay: -1s;
     transform: rotate(-7deg);
@@ -481,11 +481,11 @@ iframe {
         left: 0vw;
     }
 
-    #cre {
+    #ins {
         left: 29.375vw;
     }
 
-    #ins {
+    #cre {
         right: 0vw;
     }
 
