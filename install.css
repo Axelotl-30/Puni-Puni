@@ -287,9 +287,10 @@ h1 {
         100% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
     }
 
-    .GTP{
-        width: 50vw;
-        height: calc(50vw*12/100);
+    .apk{
+        width: 60vw;
+        height: calc(60vw*12/100);
+        font-size: medium;
     }
 
 }
