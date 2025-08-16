@@ -79,6 +79,143 @@ h1 {
     border-style: dashed;
 }
 
+.GTP{
+    width: 25vw;
+    height: calc(25vw*12/100);
+    border-radius: 25px;
+    border-color: #DDDDDD;
+    border-width: 3px;
+    border-style: solid;
+    background: linear-gradient(135deg, #ff6666, #6666ff);
+    cursor: pointer;
+    font-family: ywBig;
+    color: #DDDDDD;
+    font-size: larger;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.GTP:hover{
+    transform: scale(1.2);
+    background: linear-gradient(135deg, #6666ff, #ff6666);
+}
+
+.apk {
+    margin: 15px;
+}
+
+.header {
+    background-image: url('assets/nuage_g.png'), url('assets/head.png'), url('assets/nuage_d.png');
+    width: 100vw;
+    height: calc(100vw*886/1780);
+    background-size: 10vw auto, 80vw auto, 10vw auto;
+    background-repeat: no-repeat;
+    background-position: left top, center top, right top;
+    z-index: 2;
+}
+
+.header_gradient {
+    position: absolute;
+    top: calc(100vw*850/1780);
+    left: 0;
+    width: 100vw;
+    height: calc(100vw*150/1600);
+    background-image: linear-gradient(to bottom, rgba(236, 244, 251, 1), rgba(236, 244, 251, 0));
+    pointer-events: none; /* permet de cliquer à travers le gradient */
+    z-index: 0;
+}
+
+.nuage_container {
+    width: 80vw;
+    display: flex;
+    margin: 0 10vw 0 10vw;
+    height: calc(1.5*33vw*655/2048);
+    z-index: 9;
+}
+
+.nuage {
+    width: 33vw;
+    height: calc(33vw*873/2048);
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.nuage:hover {
+    transform: scale(1.2);
+}
+
+@keyframes floating {
+    0% {top: calc(100vw*760/1780);}
+    100% {top: calc(0.5*33vw*655/2048 + 100vw*760/1780);}
+}
+
+@keyframes floating_center {
+    0% {top: calc(100vw*800/1780);}
+    100% {top: calc(0.5*33vw*655/2048 + 100vw*800/1780);}
+}
+
+#pre {
+    background-image: url('assets/nuages/Presentation_passelectionné.png');
+    animation: floating 4.2s ease-in-out infinite alternate;
+    transform: rotate(7deg);
+    left: 10vw;
+}
+
+#ins {
+    background-image: url('assets/nuages/Instal_selectionné.png');
+    animation: floating_center 4.5s ease-in-out infinite alternate;
+    animation-delay: -3s;
+    left: 33.5vw;
+}
+
+#cre {
+    background-image: url('assets/nuages/Credit_Pas.png');
+    animation: floating 4.35s ease-in-out infinite alternate;
+    animation-delay: -1s;
+    transform: rotate(-7deg);
+    right: 10vw;
+}
+
+.hitbox {
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(80vw/3);
+    height: 100%;
+    z-index: 999; /* toujours au-dessus */
+    background: transparent; /* invisible */
+    cursor: pointer;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+    background-image: url('assets/icons/shogunyan.png'), url('assets/icons/nyanmurai.png'), url('assets/icons/foudomyo.png');
+    background-size: 10vw, 10vw, 10vw;
+    background-repeat: no-repeat;
+    background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
+    animation: poyo 1.5s infinite;
+    z-index: 9999;
+}
+
+@keyframes poyo {
+  0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
+  25% {background-position: 29vw 35vh, 45vw 45vh, 60vw 45vh; background-size: 12vw, 10vw, 10vw;}
+  50% {background-position: 30vw 45vh, 44vw 35vh, 60vw 45vh; background-size: 10vw, 12vw, 10vw;}
+  75% {background-position: 30vw 45vh, 45vw 45vh, 59vw 35vh; background-size: 10vw, 10vw, 12vw;}
+  100% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
+}
+
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
     .separator{
         width: 100vw;
@@ -88,4 +225,66 @@ h1 {
         width: 100vw;
         margin: 0;
     }
+
+    .header_gradient {
+        top: calc(100vw*850/1424);
+    }
+
+    .header {
+        height: calc(100vw*886/1424);
+        background-size: 100vw auto;
+    }
+
+    .nuage_container {
+        width: 100vw;
+        margin: 0;
+        height: calc(1.5*41.25vw*655/2048);
+    }
+
+    .nuage_container {
+        width: 100vw;
+        margin: 0;
+        height: calc(1.5*41.25vw*655/2048);
+    }
+
+    .nuage {
+        width: 41.25vw;
+        height: calc(41.25vw*873/2048);
+    }
+
+    @keyframes floating {
+        0% {top: calc(100vw*760/1424);}
+        100% {top: calc(0.5*41.25vw*655/2048 + 100vw*760/1424);}
+    }
+
+    @keyframes floating_center {
+        0% {top: calc(100vw*800/1424);}
+        100% {top: calc(0.5*41.25vw*655/2048 + 100vw*800/1424);}
+    }
+
+    #pre {
+        left: 0vw;
+    }
+
+    #ins {
+        left: 29.375vw;
+    }
+
+    #cre {
+        right: 0vw;
+    }
+
+    #preloader {
+        background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh;
+        background-size: 16vw, 16vw, 16vw;
+    }
+
+    @keyframes poyo {
+        0% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
+        25% {background-position: 19vw 32vh, 42vw 42vh, 64vw 42vh; background-size: 18vw, 16vw, 16vw;}
+        50% {background-position: 20vw 42vh, 41vw 32vh, 64vw 42vh; background-size: 16vw, 18vw, 16vw;}
+        75% {background-position: 20vw 42vh, 42vw 42vh, 63vw 32vh; background-size: 16vw, 16vw, 18vw;}
+        100% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
+    }
+
 }
