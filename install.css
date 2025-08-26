@@ -71,10 +71,15 @@ h1 {
     font-family: ywCool;
 }
 
+.h0 {
+    font-family: ywCool;
+    font-size: 2.5em;
+}
+
 .separator{
     width: 60vw;
     height: 0;
-    border-width: 3px;
+    border-width: 0;
     background-color: transparent;
     border-style: dashed;
 }
