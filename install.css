@@ -211,6 +211,126 @@ h1 {
     z-index: 9999;
 }
 
+.footer {
+    margin: 10vh 0 0 0;
+    height: 100vw;
+    background-color: transparent;
+    display: flex;
+    background-image: url('assets/pad/Oreille_Pad_G.png'), url('assets/pad/Oreille_Pad_D.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Bouche_Pad.png'), url('assets/pad/black.png');
+    background-size: calc(24vw) calc(24vw*977/1442), calc(24vw) calc(24vw*977/1442), 24vw 24vw, 24vw 24vw, 80vw auto, 100vw calc(100vw - 24vw*977/1442);
+    background-position: left top, right top, 5vw calc(24vw*977/1442 + 10vw), 71vw calc(24vw*977/1442 + 10vw), center calc(24vw*977/1442 + 10vw + 24vw + 10vw), left calc(24vw*977/1442);
+    background-repeat: no-repeat;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height: calc(95vw - 24vw*977/1442);
+    margin: calc(24vw*977/1442 + 2.5vw) 2.5vw 2.5vw 2.5vw;
+    background-color: rgba(84, 84, 84, 0.33);
+    border-radius: 10%;
+}
+
+.screen > .gradient-text {
+    margin: 0 auto 10vw auto;
+    height: calc(1.5*50vw*100/970.7);
+    font-family: ywCool;
+    font-size: calc(50vw*100/970.7);
+    -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
+}
+
+a > .gradient-text {
+    box-sizing: content-box;
+    margin: auto 0 auto 15vw;
+    height: calc(1.21*50vw*100/970.7);
+    font-family: ywCool;
+    font-size: calc(0.80*50vw*100/970.7);
+    -webkit-text-stroke: calc(0.04*(50vw*100/970.7)) white;
+}
+
+.gradient-text {
+    text-align: center;
+    align-items: center;
+    display: inline-block; /* largeur de la div = largeur du texte */
+    background: -webkit-linear-gradient(bottom left, #E65F42, #F6B03A, #C7BA31, #9CC328, #5CACCC);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px white;
+    background-size: 100% 1%;
+}
+
+#ytb::before, #ytb::after,
+#mail::before, #mail::after,
+#dcd::before, #dcd::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 12.5vw; height: 12.5vw;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 2.5vw;
+}
+
+#ytb::before {
+    background-image: url('assets/icons/youtube_icon.png');
+    opacity: 1;
+}
+
+#mail::before {
+    background-color: #5CACCC;
+    background-image: url('assets/icons/mail.png');
+    opacity: 1;
+}
+
+#dcd::before {
+    background-image: url('assets/icons/discord_icon.png');
+    opacity: 1;
+}
+
+#ytb::after{
+    background-image: url('assets/icons/wibwob.png');
+    opacity: 0;
+}
+
+#mail::after {
+    background-image: url('assets/icons/gmail.png');
+    opacity: 0;
+}
+
+#dcd::after {
+    background-image: url('assets/icons/server.jpg');
+    opacity: 0;
+}
+
+#ytb:hover::before, #mail:hover::before, #dcd:hover::before {
+    opacity: 0;
+}
+
+#ytb:hover::after, #mail:hover::after, #dcd:hover::after {
+    opacity: 1;
+}
+
+#ytb, #mail, #dcd {
+    background-size: 12.5vw;
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 12.5vw;
+    width: 37vw;
+    position: relative;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2.5vw;
+}
+
 @keyframes poyo {
   0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
   25% {background-position: 29vw 35vh, 45vw 45vh, 60vw 45vh; background-size: 12vw, 10vw, 10vw;}
@@ -301,5 +421,11 @@ h1 {
         font-size: large;
         border-radius: 25px;
     }
+
+    .footer {
+        background-size: 30vw calc(30vw*977/1442), 30vw calc(30vw*977/1442), 30vw 30vw, 30vw 30vw, 80vw auto, 100vw calc(100vw - 30vw*977/1442);
+        background-position: left top, right top, 5vw calc(30vw*977/1442 + 10vw), 65vw calc(30vw*977/1442 + 10vw), center calc(30vw*977/1442 + 10vw + 30vw + 10vw), left calc(30vw*977/1442);
+    }
+
 
 }
