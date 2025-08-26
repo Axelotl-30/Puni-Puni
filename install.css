@@ -67,6 +67,12 @@ html {
     margin: 0 20vw 0 20vw;
 }
 
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
     font-family: ywCool;
 }
@@ -74,6 +80,10 @@ h1 {
 .h0 {
     font-family: ywCool;
     font-size: 2.5em;
+}
+
+u{
+    color: #880000;
 }
 
 .separator{

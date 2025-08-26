@@ -364,6 +364,13 @@ iframe {
     z-index: 9999;
 }
 
+.copyright {
+    color: white;
+    font-size: 2em;
+    font-family: sub;
+    margin: 0 auto 0 auto;
+}
+
 @keyframes poyo {
   0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
   25% {background-position: 29vw 35vh, 45vw 45vh, 60vw 45vh; background-size: 12vw, 10vw, 10vw;}
