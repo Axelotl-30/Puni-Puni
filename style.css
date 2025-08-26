@@ -493,4 +493,8 @@ iframe {
         margin: 0;
         border-radius: 20px;
     }
+
+    .copyright {
+        font-size: 1em;
+    }
 }
