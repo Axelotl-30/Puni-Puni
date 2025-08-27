@@ -172,4 +172,21 @@ a {
     .copyright {
         font-size: 1em;
     }
+
+    #btnTop {
+        width: 12.5vw;
+        height: 12.5vw;
+    }
+
+    p {
+        font-size: 8px;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    .h0 {
+        font-size: 1.75em;
+    }
 }

@@ -532,4 +532,9 @@ iframe {
     .spacer {
         height: calc(5vh);
     }
+
+    #btnTop {
+        width: 12.5vw;
+        height: 12.5vw;
+    }
 }
