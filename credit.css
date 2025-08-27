@@ -138,20 +138,21 @@ a {
       position: fixed;
       bottom: 20px;
       right: 20px;
+      width: 5vw;
+      height: 5vw;
       display: none; /* Caché au départ */
-      background-color: #3498db;
-      color: white;
       border: none;
-      padding: 12px 16px;
-      border-radius: 50%;
       cursor: pointer;
-      font-size: 18px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s;
+      filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
+      background-image: url('assets/top_btn.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
     }
-    #btnTop:hover {
-      background-color: #2980b9;
-    }
+    
+#btnTop:hover {
+    transform: scale(1.2);
+}
 
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
     .footer {

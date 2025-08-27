@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
   window.scrollTo({
-    top: 0,
+    top: window.innerHeight*0.25,
     behavior: "smooth" // défilement doux
   });
   const preloader = document.getElementById('preloader');
@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
 
 function scrollToTop() {
   window.scrollTo({
-    top: window.innerHeight*0.25,
+    top: 0,
     behavior: "smooth" // défilement doux
   });
 }

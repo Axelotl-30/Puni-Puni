@@ -90,12 +90,13 @@ html {
 .layer6 { background-image: url('assets/popups/p2img3.png'); }
 
 .left_arrow {
-    transform: rotate(-8deg);
     top: 0;
     left: 0;
     width: 5vw;
     background-size: 5vw auto;
     background-image: url('assets/popups/Slide_FlecheG.png');
+    background-position: center;
+    animation: resizing 2s linear infinite;
 }
 .character {
     transform: rotate(-8deg);
@@ -107,12 +108,13 @@ html {
 }
 
 .right_arrow {
-    transform: rotate(-8deg);
     top: 0;
     left: 35vw;
     width: 5vw;
     background-size: 5vw auto;
     background-image: url('assets/popups/Slide_FlecheD.png');
+    background-position: center 46.5%; /* for alignement */
+    animation: resizing 2s ease-in-out infinite;
 }
 
 .left_arrow:hover, .right_arrow:hover {
@@ -131,6 +133,15 @@ html {
     font-family: sub;
     font-size: 1.5vw;
     color: #222222
+}
+
+@keyframes resizing {
+    0%, 100% {
+        transform: scale(1) rotate(-8deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-8deg);
+    }
 }
 
 .footer {
@@ -375,20 +386,21 @@ iframe {
       position: fixed;
       bottom: 20px;
       right: 20px;
+      width: 5vw;
+      height: 5vw;
       display: none; /* Caché au départ */
-      background-color: #3498db;
-      color: white;
       border: none;
-      padding: 12px 16px;
-      border-radius: 50%;
       cursor: pointer;
-      font-size: 18px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s;
+      filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
+      background-image: url('assets/top_btn.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
     }
-    #btnTop:hover {
-      background-color: #2980b9;
-    }
+
+#btnTop:hover {
+    transform: scale(1.2);
+}
 
 @keyframes poyo {
   0% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
@@ -515,5 +527,9 @@ iframe {
 
     .copyright {
         font-size: 1em;
+    }
+
+    .spacer {
+        height: calc(5vh);
     }
 }
