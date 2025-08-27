@@ -89,6 +89,10 @@ h1 {
     font-size: 2.5em;
 }
 
+.h0 > .gradient-text {
+    -webkit-text-stroke: 2px white;
+}
+
 u{
     color: #880000;
 }

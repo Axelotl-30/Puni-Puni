@@ -154,6 +154,15 @@ a {
     transform: scale(1.2);
 }
 
+.h0 {
+    font-family: ywCool;
+    font-size: 2.5em;
+}
+
+.h0 > .gradient-text {
+    -webkit-text-stroke: 2px white;
+}
+
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
     .footer {
         background-size: 30vw calc(30vw*977/1442), 30vw calc(30vw*977/1442), 30vw 30vw, 30vw 30vw, 80vw auto, 100vw calc(100vw - 30vw*977/1442);
