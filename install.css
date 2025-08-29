@@ -513,4 +513,10 @@ a {
     .h0 {
         font-size: 1.75em;
     }
+
+    .dl_btn {
+        width: calc(0.15*100vw);
+        height: calc(2/3*0.15*100vw);
+        margin: 0 1vw 0 0.1vw;
+    }
 }
