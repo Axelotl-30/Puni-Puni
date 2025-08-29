@@ -71,6 +71,9 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 60vw;
+    margin: 0 20vw 0 20vw;
 }
 
 .copyright {
@@ -133,6 +136,23 @@ u{
     width: auto;
     padding: 5px;
     border-radius: 35px;
+}
+
+.dl_btn {
+    width: calc(0.15*60vw);
+    height: calc(2/3*0.15*60vw);
+    background-image: url('assets/ver1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 0.75vw 0 0.75vw;
+}
+
+.v2{
+    background-image: url('assets/ver2.png');
+}
+
+.dl_btn:hover{
+    transform: scale(1.2);
 }
 
 .header {
