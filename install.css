@@ -108,34 +108,13 @@ u{
     border-style: dashed;
 }
 
-.GTP{
+.get_btn {
     width: 25vw;
-    height: calc(25vw*12/100);
-    border-radius: 25px;
-    border-color: #DDDDDD;
-    border-width: 3px;
-    border-style: solid;
-    background: linear-gradient(135deg, #ff6666, #6666ff);
-    cursor: pointer;
-    font-family: ywBig;
-    color: #DDDDDD;
-    font-size: larger;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none; 
-}
-
-.GTP:hover{
-    transform: scale(1.2);
-    background: linear-gradient(135deg, #6666ff, #ff6666);
-}
-
-.apk {
-    margin: 15px;
-    width: auto;
-    padding: 5px;
-    border-radius: 35px;
+    height: calc(25vw*125/540);
+    background-image: url('assets/get.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: resizing 2s ease-in-out infinite;
 }
 
 .dl_btn {
@@ -153,6 +132,15 @@ u{
 
 .dl_btn:hover{
     transform: scale(1.2);
+}
+
+@keyframes resizing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .header {
@@ -476,16 +464,9 @@ a {
         100% {background-position: 20vw 42vh, 42vw 42vh, 64vw 42vh; background-size: 16vw, 16vw, 16vw;}
     }
 
-    .GTP {
+    .get_btn {
         width: 60vw;
-        height: calc(60vw*12/100);
-    }
-
-    .apk{
-        width: auto;
-        height: calc(60vw*12/100);
-        font-size: large;
-        border-radius: 25px;
+        height: calc(60vw*125/540);
     }
 
     .footer {

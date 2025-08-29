@@ -96,7 +96,7 @@ html {
     background-size: 5vw auto;
     background-image: url('assets/popups/Slide_FlecheG.png');
     background-position: center;
-    animation: resizing 2s linear infinite;
+    animation: resizing 2s ease-in-out infinite;
 }
 .character {
     transform: rotate(-8deg);
