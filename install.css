@@ -417,6 +417,10 @@ a {
   100% {background-position: 30vw 45vh, 45vw 45vh, 60vw 45vh; background-size: 10vw, 10vw, 10vw;}
 }
 
+.temp-spacer {
+    height: 50vh;
+}
+
 @media (max-aspect-ratio: 1){ /*donc l'écran est plus long que large */
     .separator{
         width: 100vw;
