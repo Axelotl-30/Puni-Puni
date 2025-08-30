@@ -101,10 +101,3 @@ function switch_character(side){
         btn.style.display = "none";
       }
     };
-
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth" // défilement doux
-  });
-}

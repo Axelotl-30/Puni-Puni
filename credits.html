@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <!-- le code de ce site est clairement pas un exemple à suivre, je fais ça pour le fun. Si vous voulez vous lancer dans le dévellopement web pitié soyez plus clair et rigoureux que moi -->
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +14,22 @@
 
 <body>
     <div id="preloader"></div>
-    <button id="btnTop" onclick="scrollToTop()"></button>
+    <a href="#" id="btnTop" ></a>
     <div class="header"></div>
     <div class="header_gradient"></div>
-    <div class="nuage_container">
-        <div class="nuage" id="pre"></div>
-        <div class="nuage" id="cre"></div>
-        <div class="nuage" id="ins"></div>
 
-        <a href="index.html" class="hitbox" id="hit-pre"></a>
-        <a href="install.html" class="hitbox" id="hit-ins"></a>   
-        <a href="credits.html" class="hitbox" id="hit-cre"></a>
-    </div>
+    <a href="index.html" class="cloud cl">
+        <img src="assets/nuages/Presentation_passelectionné.png" alt="Nuage gauche" />
+    </a>
+     <a href="credits.html" class="cloud cr">
+        <img src="assets/nuages/Credit_selectionné.png" alt="Nuage droit" />
+    </a>
+    <a href="install.html" class="cloud cc">
+        <img src="assets/nuages/Instal_passelectionné.png" alt="Nuage centre" />
+    </a>
+
+    <div class="spacer"></div>
+
     <div class="container">
         <div class="h0"><div class="gradient-text">✨ Credits</div></div>
         <p>A huge thank you to everyone who contributed to the <strong>Puni Puni patch</strong>! </p>

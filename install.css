@@ -57,6 +57,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.spacer {
+    height: calc(100vw*150/1600 + 0.5*33vw*655/2048 + 5vh);
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -144,13 +148,14 @@ u{
 }
 
 .header {
+    position: relative;
     background-image: url('assets/nuage_g.png'), url('assets/head.png'), url('assets/nuage_d.png');
     width: 100vw;
     height: calc(100vw*886/1780);
     background-size: 10vw auto, 80vw auto, 10vw auto;
     background-repeat: no-repeat;
     background-position: left top, center top, right top;
-    z-index: 2;
+    z-index: 1;
 }
 
 .header_gradient {
@@ -164,57 +169,73 @@ u{
     z-index: 0;
 }
 
-.nuage_container {
-    width: 80vw;
-    display: flex;
-    margin: 0 10vw 0 10vw;
-    height: calc(1.5*33vw*655/2048);
-    z-index: 9;
-}
-
-.nuage {
-    width: 33vw;
-    height: calc(33vw*873/2048);
-    flex-shrink: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
+.cloud {
     position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    width: 33vw;
+    height: fit-content;
+    z-index: 2;
 }
 
-.nuage:hover {
-    transform: scale(1.2);
+.cloud img {
+    display: block;
+    width: 100%; 
+    height: auto;
 }
 
-@keyframes floating {
-    0% {top: calc(100vw*760/1780);}
-    100% {top: calc(0.5*33vw*655/2048 + 100vw*760/1780);}
-}
-
-@keyframes floating_center {
-    0% {top: calc(100vw*800/1780);}
-    100% {top: calc(0.5*33vw*655/2048 + 100vw*800/1780);}
-}
-
-#pre {
-    background-image: url('assets/nuages/Presentation_passelectionné.png');
-    animation: floating 4.2s ease-in-out infinite alternate;
-    transform: rotate(7deg);
+/* Positions initiales */
+.cl {
     left: 10vw;
+    top: calc(100vw*760/1780);
+    animation: float-left 8.4s ease-in-out infinite;
 }
 
-#ins {
-    background-image: url('assets/nuages/Instal_selectionné.png');
-    animation: floating_center 4.5s ease-in-out infinite alternate;
+.cc {
+    left: calc((100vw - 33vw)/2);
+    top: calc(100vw*800/1780);
+    animation: float-center 9s ease-in-out infinite;
     animation-delay: -3s;
-    left: 33.5vw;
 }
 
-#cre {
-    background-image: url('assets/nuages/Credit_Pas.png');
-    animation: floating 4.35s ease-in-out infinite alternate;
-    animation-delay: -1s;
-    transform: rotate(-7deg);
+.cr {
     right: 10vw;
+    top: calc(100vw*760/1780);
+    animation: float-right 8.7s ease-in-out infinite;
+    animation-delay: -1.75s;
+    transform: rotate(-7deg);
+}
+
+.cloud:hover img {
+  transform: scale(1.2);
+}
+
+/* Animation de flottement */
+@keyframes float-left {
+  0%, 100% {
+    transform: rotate(7deg) translateY(0);
+  }
+  50% {
+    transform: rotate(7deg) translateY(calc(0.5*33vw*655/2048));
+  }
+}
+
+@keyframes float-right {
+  0%, 100% {
+    transform: rotate(-7deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-7deg) translateY(calc(0.5*33vw*655/2048));
+  }
+}
+
+@keyframes float-center {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(0.5*33vw*655/2048));
+  }
 }
 
 .hitbox {
@@ -359,6 +380,9 @@ a > .gradient-text {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+#ytb, #mail, #dcd{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -366,20 +390,20 @@ a {
 }
 
 #btnTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 5vw;
-      height: 5vw;
-      display: none; /* Caché au départ */
-      border: none;
-      cursor: pointer;
-      filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
-      background-image: url('assets/top_btn.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-color: transparent;
-    }
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 5vw;
+    height: 5vw;
+    display: none; /* Caché au départ */
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.33));
+    background-image: url('assets/top_btn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
     
 #btnTop:hover {
     transform: scale(1.2);
@@ -412,43 +436,52 @@ a {
         background-size: 100vw auto;
     }
 
-    .nuage_container {
-        width: 100vw;
-        margin: 0;
-        height: calc(1.5*41.25vw*655/2048);
-    }
-
-    .nuage_container {
-        width: 100vw;
-        margin: 0;
-        height: calc(1.5*41.25vw*655/2048);
-    }
-
-    .nuage {
+    .cloud {
         width: 41.25vw;
-        height: calc(41.25vw*873/2048);
     }
 
-    @keyframes floating {
-        0% {top: calc(100vw*760/1424);}
-        100% {top: calc(0.5*41.25vw*655/2048 + 100vw*760/1424);}
-    }
-
-    @keyframes floating_center {
-        0% {top: calc(100vw*800/1424);}
-        100% {top: calc(0.5*41.25vw*655/2048 + 100vw*800/1424);}
-    }
-
-    #pre {
+    /* Positions initiales */
+    .cl {
         left: 0vw;
+        top: calc(100vw*760/1424);
     }
 
-    #ins {
-        left: 29.375vw;
+    .cc {
+        left: calc((100vw - 41.25vw)/2);
+        top: calc(100vw*800/1424);
     }
 
-    #cre {
+    .cr {
         right: 0vw;
+        top: calc(100vw*760/1424);
+    }
+
+    /* Animation de flottement */
+    @keyframes float-left {
+    0%, 100% {
+        transform: rotate(7deg) translateY(0);
+    }
+    50% {
+        transform: rotate(7deg) translateY(calc(0.5*41.25vw*655/2048));
+    }
+    }
+
+    @keyframes float-right {
+    0%, 100% {
+        transform: rotate(-7deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-7deg) translateY(calc(0.5*41.25vw*655/2048));
+    }
+    }
+
+    @keyframes float-center {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(calc(0.5*41.25vw*655/2048));
+    }
     }
 
     #preloader {
@@ -499,5 +532,9 @@ a {
         width: calc(0.15*100vw);
         height: calc(2/3*0.15*100vw);
         margin: 0 1vw 0 0.1vw;
+    }
+
+    .spacer {
+        height: calc(100vw*150/1600 + 0.5*41.25vw*655/2048 + 5vh);
     }
 }
