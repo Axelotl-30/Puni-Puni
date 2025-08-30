@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- le code de ce site est clairement pas un exemple à suivre, je fais ça pour le fun. Si vous voulez vous lancer dans le dévellopement web pitié soyez plus clair et rigoureux que moi -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Puni Puni translated</title>
+    <link rel="shortcut icon" href=".\assets\icons\project_icon.png">
+
+    <meta property="og:title" content="Puni Puni translated" />
+    <meta property="og:description" content="Have you ever wanted to play Yo-kai Watch: Puni Puni but felt blocked by the language barrier? That's over now. 🚀 Thanks to a passionate community, you can finally enjoy Puni Puni in English with our fan-made translation patch!" />
+    <meta property="og:image" content="https://punisphere.com/assets/head.png" />
+    <meta property="og:url" content="https://punisphere.com/presentation" />
+    <meta property="og:type" content="website" />
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <div class="header"></div>
+    <div class="header_gradient"></div>
+
+    <a href="index.html" class="cloud cl">
+        <img src="assets/nuages/Presentation_selectionné.png" alt="Nuage gauche" />
+    </a>
+     <a href="credits.html" class="cloud cr">
+        <img src="assets/nuages/Credit_Pas.png" alt="Nuage droit" />
+    </a>
+    <a href="install.html" class="cloud cc">
+        <img src="assets/nuages/Instal_passelectionné.png" alt="Nuage centre" />
+    </a>
+
+    <div class="spacer"></div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KI9nb9fxGWE?rel=0&si=p_3oPA81BGr25BZl&autoplay=1&mute=1&playlist=KI9nb9fxGWE&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="popup">
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+    </div>
+
+    <div class="popup character_selector">
+        <div class="layer ctext"></div>
+        <div class="layer left_arrow" onclick="switch_character('left')"></div>
+        <div class="layer character"></div>
+        <div class="layer right_arrow" onclick="switch_character('right')"></div>      
+        <div class="layer cpuni"></div>
+        <div class="layer update_text"></div>
+    </div>
+
+    <div class="popup">
+        <div class="layer layer4"></div>
+        <div class="layer layer5"></div>
+        <div class="layer layer6"></div>
+    </div>
+
+    <a href="#" id="btnTop" ></a>
+    
+    <div class="footer">
+        <div class="screen">
+            <div class="gradient-text">Contact us !</div>
+            <a id="ytb" href="https://www.youtube.com/@WibWobChannel" target="_blank">
+                <div class="gradient-text">Youtube</div>
+            </a>
+            <a id="mail" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">
+                <div class="gradient-text">E-mail</div>
+            </a>
+            <a id="dcd" href="https://discord.gg/fcRFvgBAgV" target="_blank">
+                <div class="gradient-text">Discord</div>
+            </a>
+            <p class="copyright">©2025 punisphere.com</p>
+    </div>
+</body>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</html>
