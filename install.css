@@ -272,7 +272,7 @@ u{
     background-color: transparent;
     display: flex;
     background-image: url('assets/pad/Oreille_Pad_G.png'), url('assets/pad/Oreille_Pad_D.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Oeil_Pad.png'), url('assets/pad/Bouche_Pad.png'), url('assets/pad/black.png');
-    background-size: calc(24vw) calc(24vw*977/1442), calc(24vw) calc(24vw*977/1442), 24vw 24vw, 24vw 24vw, 80vw auto, 100vw calc(100vw - 24vw*977/1442);
+    background-size: calc(24vw) calc(24vw*977/1442 + 1px), calc(24vw) calc(24vw*977/1442 + 1px), 24vw 24vw, 24vw 24vw, 80vw auto, 100vw calc(100vw - 24vw*977/1442);
     background-position: left top, right top, 5vw calc(24vw*977/1442 + 10vw), 71vw calc(24vw*977/1442 + 10vw), center calc(24vw*977/1442 + 10vw + 24vw + 10vw), left calc(24vw*977/1442);
     background-repeat: no-repeat;
 }
@@ -507,7 +507,7 @@ a {
     }
 
     .footer {
-        background-size: 30vw calc(30vw*977/1442), 30vw calc(30vw*977/1442), 30vw 30vw, 30vw 30vw, 80vw auto, 100vw calc(100vw - 30vw*977/1442);
+        background-size: 30vw calc(30vw*977/1442 + 1px), 30vw calc(30vw*977/1442 + 1px), 30vw 30vw, 30vw 30vw, 80vw auto, 100vw calc(100vw - 30vw*977/1442);
         background-position: left top, right top, 5vw calc(30vw*977/1442 + 10vw), 65vw calc(30vw*977/1442 + 10vw), center calc(30vw*977/1442 + 10vw + 30vw + 10vw), left calc(30vw*977/1442);
     }
 
