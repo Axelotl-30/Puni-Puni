@@ -532,9 +532,14 @@ a {
         font-size: 1.75em;
     }
 
+    .container2 {
+       width: 100vw;
+       margin: 0;
+    }
+
     .dl_btn {
-        width: calc(0.15*100vw);
-        height: calc(2/3*0.15*100vw);
+        width: calc(0.20*100vw);
+        height: calc(2/3*0.20*100vw);
         margin: 0 1vw 0 0.1vw;
     }
 
